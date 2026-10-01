@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZAINO - 40 Day Reset</title>
+<meta name="description" content="ZAINO: a 40-day challenge for fat loss, calm and energy.">
+<link rel="stylesheet" href="style.css">
+</head><body>
+<canvas id="bg"></canvas>
+<nav><b>ZAINO</b><a href="#plan">Plan</a><a href="#tracker">Tracker</a><a href="#calm">Calm</a><a href="#health">Health</a></nav>
+<header class="hero">
+  <div class="scene"><div class="cube"><i class="f1">Z</i><i class="f2">A</i><i class="f3">I</i><i class="f4">N</i><i class="f5">O</i><i class="f6">40</i></div></div>
+  <div class="copy">
+    <h1>ZAINO</h1>
+    <p class="tag">40 days. Lighter body. Calmer mind. Stronger you.</p>
+    <p>A free, private challenge for fat loss, anxiety control and breaking the late-night habit loop. Built for a 24-year-old starting at 95 kg.</p>
+    <a class="btn" href="#tracker">Start day 1</a>
+  </div>
+</header>
+<section class="stats">
+  <div class="tilt card"><span id="sDay">0</span><small>days done</small></div>
+  <div class="tilt card"><span id="sStreak">0</span><small>day streak</small></div>
+  <div class="tilt card"><span id="sKg">-</span><small>kg lost</small></div>
+  <div class="tilt card"><span id="sUrge">0</span><small>urges surfed</small></div>
+</section>
+<section id="plan"><h2>The 4 phases</h2><div id="phases" class="grid4"></div></section>
+<section id="tracker"><h2>Your 40 days</h2>
+  <p class="muted">Tap a day to open its checklist. Everything is saved only in your browser.</p>
+  <div id="days" class="days"></div>
+  <div id="panel" class="card panel"></div>
+</section>
+<section><h2>Weight log</h2>
+  <div class="card row">
+    <input id="wIn" type="number" step="0.1" placeholder="Today's weight (kg)">
+    <button class="btn" id="wBtn">Save</button>
+    <button class="btn ghost" id="wReset">Reset all data</button>
+  </div>
+  <canvas id="chart" width="900" height="260" class="card"></canvas>
+  <p class="muted">Realistic target: 0.5-1 kg per week, so roughly 3-6 kg over 40 days (about 90 kg goal). Weigh at the same time, a few times a week.</p>
+</section>
+<section><h2>Calorie estimate</h2>
+  <div class="card row">
+    <input id="cH" type="number" placeholder="Height (cm)"><input id="cW" type="number" value="95" placeholder="Weight (kg)">
+    <input id="cA" type="number" value="24" placeholder="Age">
+    <select id="cAct"><option value="1.375">Light activity</option><option value="1.2">Mostly sitting</option><option value="1.55">Active</option></select>
+    <button class="btn" id="cBtn">Calculate</button>
+  </div>
+  <div id="cOut" class="card muted">Enter your height to estimate maintenance calories and a gentle target.</div>
+  <div id="meals" class="grid4"></div>
+</section>
+<section id="calm"><h2>Calm and urge toolkit</h2>
+  <div class="grid2">
+    <div class="card center"><div id="orb" class="orb">Ready</div><button class="btn" id="bBtn">Start box breathing</button><p class="muted">4s in, 4s hold, 4s out, 4s hold. Repeat for 5 minutes when anxious or tempted.</p></div>
+    <div class="card"><h3>Urge surfing (10 min)</h3>
+      <ol><li>Stop. Say: "This is an urge, not an order."</li><li>Rate it 1-10 and find where you feel it in the body.</li><li>Breathe slowly and watch the number rise and fall.</li><li>Change location: cold water, walk outside, push-ups.</li><li>Log it. Every urge you ride out weakens the loop.</li></ol>
+      <button class="btn" id="uBtn">I surfed an urge</button>
+    </div>
+  </div>
+  <div class="card"><h3>Trigger-proofing</h3><ul>
+   <li>Phone charges outside the bedroom; use a content blocker on all devices.</li>
+   <li>Avoid lying in bed awake. Get up, dim light, read paper pages until sleepy.</li>
+   <li>Plan the risky hour (often late night): walk, gym, call, shower.</li>
+   <li>Notice anxiety, boredom or loneliness before the urge starts.</li></ul></div>
+</section>
+<section id="health"><h2>Health notes</h2>
+  <div class="card"><ul>
+   <li><b>Low testosterone:</b> do not self-diagnose. Ask a doctor for a morning blood test (total testosterone, repeated) plus thyroid, vitamin D, glucose/HbA1c. Weight loss, strength training, good diet and 7-9 h sleep are the proven natural levers.</li>
+   <li><b>Anxiety:</b> if worry, panic or poor sleep continues for weeks, see a doctor or therapist. CBT works well.</li>
+   <li><b>Compulsive habits:</b> if it feels out of control or harms work, relationships or mood, a therapist can help. There is no shame in this.</li>
+   <li><b>Avoid</b> crash diets, "testosterone booster" supplements and steroids without a doctor.</li>
+   <li>Not medical advice. Stop and seek help for chest pain, dizziness or fainting.</li></ul></div>
+</section>
+<footer>ZAINO - built with Python + HTML/CSS/JS - free on GitHub Pages</footer>
+<script>const PLAN=__DATA__;</script>
+<script src="app.js"></script>
+</body></html>
